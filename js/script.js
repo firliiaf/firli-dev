@@ -148,6 +148,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        if (nav.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-times');
+            document.body.style.overflow = 'hidden';
+        } else {
+            icon.classList.replace('fa-times', 'fa-bars');
+            document.body.style.overflow = 'auto';
+        }
     });
 
     // Smooth Scrolling
@@ -165,6 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Close mobile menu if open
                 nav.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.replace('fa-times', 'fa-bars');
+                document.body.style.overflow = 'auto';
             }
         });
     });

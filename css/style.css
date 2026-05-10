@@ -73,13 +73,13 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.5rem 10%;
+    padding: 1.2rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(15, 12, 41, 0.8);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+    background: rgba(15, 12, 41, 0.95);
+    backdrop-filter: blur(15px);
+    z-index: 5000; /* Higher z-index to stay above everything */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -101,6 +101,8 @@ header {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    position: relative;
+    z-index: 5002; /* Higher than nav but lower than menu-toggle if needed */
 }
 
 .lang-selector {
@@ -569,20 +571,43 @@ section {
 
 @media (max-width: 768px) {
     .header-right { gap: 1rem; }
-    .menu-toggle { display: block; }
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--bg-dark);
-        display: none;
-        padding: 2rem;
-        border-bottom: 1px solid var(--secondary-color);
+    .menu-toggle { 
+        display: block; 
+        z-index: 5001;
     }
-    nav.active { display: block; }
-    nav ul { flex-direction: column; align-items: center; }
-    nav ul li { margin: 1rem 0; }
+    nav {
+        position: fixed; /* Change to fixed to cover screen */
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 80%;
+        height: 100vh;
+        background: #0f0c29;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        z-index: 4999;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        border-left: 1px solid var(--secondary-color);
+        padding: 2rem;
+    }
+    nav.active { 
+        right: 0;
+        display: flex;
+    }
+    nav ul { 
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+    }
+    nav ul li { 
+        margin: 1.5rem 0; 
+        margin-left: 0;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
     
     .hero-content h1 { font-size: 2.5rem; }
     .hero-stats { font-size: 0.9rem; }
@@ -603,11 +628,14 @@ section {
 
     .tools-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 0.8rem;
     }
     
-    .tool-item { padding: 1rem; }
-    .tool-item i { font-size: 1.5rem; }
+    .tool-item { 
+        padding: 0.8rem;
+    }
+    .tool-item i { font-size: 1.4rem; }
+    .tool-item p { font-size: 0.8rem; }
     
     .modal-content {
         width: 95%;
@@ -628,15 +656,21 @@ section {
     
     .skills-grid { 
         grid-template-columns: repeat(2, 1fr); 
+        gap: 1rem;
     }
     
     .skill-card {
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
     }
 
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .tool-item {
+        padding: 0.6rem;
     }
     
     .contact-detailed-grid {
