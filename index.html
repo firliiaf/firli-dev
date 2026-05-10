@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Penjelajah Kode Spacetoon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars-container"></div>
+
+    <header>
+        <div class="logo">Firli<span>Dev</span></div>
+        <div class="header-right">
+            <div class="lang-selector">
+                <i class="fas fa-globe"></i>
+                <select id="langSwitch">
+                    <option value="en">EN</option>
+                    <option value="id">ID</option>
+                </select>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" data-i18n="nav-about">About</a></li>
+                <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
+                <li><a href="#tools" data-i18n="nav-tools">Tools</a></li>
+                <li><a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+                <li><a href="#education" data-i18n="nav-education">Education</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="hero-content" data-aos="zoom-in">
+                <h1 data-i18n="hero-h1">Halo, Saya <span>Fullstack Developer</span></h1>
+                <p data-i18n="hero-p">Membangun Ekosistem Web yang Tangguh & Solutif sebagai Freelancer Berpengalaman.</p>
+                <p class="hero-stats" data-i18n="hero-stats"><span>50+</span> Proyek Selesai | <span>100+</span> Pengguna Terbantu</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn" data-i18n="hero-btn-work">Lihat Karya</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero-btn-contact">Hubungi Saya</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="about-title">Tentang Saya</h2>
+            <div class="about-container">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="images/Foto-Firli.jpeg" alt="Profil Firli">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3 data-i18n="about-h3">Halo! Saya seorang Freelancer & Developer</h3>
+                    <p data-i18n="about-p1">Selamat datang di stasiun pusat data saya. Saya adalah seorang Fullstack Developer dengan <strong>pengalaman 2-3 tahun</strong> dalam merancang dan mengembangkan aplikasi web yang skalabel.</p>
+                    <p data-i18n="about-p2">Sebagai seorang freelancer, saya terbiasa bekerja secara mandiri maupun tim untuk menghadirkan solusi digital yang fungsional. Saya juga memiliki kemampuan komunikasi yang baik dalam <strong>Bahasa Indonesia</strong> maupun <strong>Bahasa Inggris (English)</strong> secara aktif.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="skills-title">Kekuatan Inti (Skills)</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML/CSS</h3>
+                </div>
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+                    <i class="fab fa-react"></i>
+                    <h3>React / Vue</h3>
+                </div>
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="500">
+                    <i class="fab fa-php"></i>
+                    <h3>PHP / Laravel</h3>
+                </div>
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="600">
+                    <i class="fas fa-database"></i>
+                    <h3>RESTful API</h3>
+                </div>
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="700">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Problem Solving</h3>
+                </div>
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="800">
+                    <i class="fas fa-cut"></i>
+                    <h3>Slicing Design</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="tools-title">Peralatan & Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-paper-plane"></i>
+                    <p>Postman</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fab fa-jira"></i>
+                    <p>Jira</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fab fa-trello"></i>
+                    <p>Trello</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-table"></i>
+                    <p>Spreadsheet</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-file-word"></i>
+                    <p>MS Word</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fas fa-file-excel"></i>
+                    <p>MS Excel</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="fas fa-file-alt"></i>
+                    <p>Google Docs</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="800">
+                    <i class="fab fa-google-drive"></i>
+                    <p>Google Drive</p>
+                </div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="900">
+                    <i class="fas fa-code"></i>
+                    <p>VS Code</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="portfolio-title">Galaksi Proyek (Portofolio)</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="100" onclick="openModal('e-rapot')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-Dashboard-E-Rapot.png" alt="E-Rapot" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>E-Rapot</h3>
+                        <p data-i18n="portfolio-item-1-p">Web-based student assessment system...</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="200" onclick="openModal('qr-code')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-QR-Code.png" alt="QR-Code Wedding" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>QR-Code Wedding</h3>
+                        <p data-i18n="portfolio-item-2-p">Digital invitation & attendance system...</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="300" onclick="openModal('pos-janari')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-POS-Janari.png" alt="POS-Janari" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>POS-Janari Sport</h3>
+                        <p data-i18n="portfolio-item-3-p">Point of Sales & Inventory management...</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="400" onclick="openModal('web-uks')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-Web-UKS.png" alt="Web-UKS" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Web-UKS</h3>
+                        <p data-i18n="portfolio-item-4-p">School healthcare management system...</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="500" onclick="openModal('pwa-iot')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-PWA-IOT.png" alt="PWA-IOT" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>PWA-IOT Monitoring</h3>
+                        <p data-i18n="portfolio-item-5-p">Real-time IoT sensor monitoring dashboard...</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="600" onclick="openModal('proklim')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-Web-Proklim.png" alt="Proklim" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Proklim Cirebon</h3>
+                        <p data-i18n="portfolio-item-6-p">Climate program information system...</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="700" onclick="openModal('desa-merdeka')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-Desa-Merdeka.png" alt="Desa Merdeka" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Desa Merdeka</h3>
+                        <p data-i18n="portfolio-item-7-p">Village digital hub & MSME platform...</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="800" onclick="openModal('web-rtq')">
+                    <div class="portfolio-img">
+                        <img src="images/Gambar-Web-RTQ.png" alt="Web-RTQ" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Web-RTQ Ulil Albab</h3>
+                        <p data-i18n="portfolio-item-8-p">Islamic education management system...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="education-title">Riwayat Belajar (Pendidikan)</h2>
+            <div class="education-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <h3 data-i18n="edu-1-h3">Sarjana Teknik Informatika</h3>
+                    <p data-i18n="edu-1-p1">Universitas Galaksi Terang (2018 - 2022)</p>
+                    <p data-i18n="edu-1-p2">Fokus pada pengembangan aplikasi web dan sistem terdistribusi.</p>
+                </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <h3 data-i18n="edu-2-h3">Sertifikasi Fullstack Developer</h3>
+                    <p data-i18n="edu-2-p1">Coding Bootcamp Space Academy (2022)</p>
+                    <p data-i18n="edu-2-p2">Pelatihan intensif selama 6 bulan dalam stack modern (MERN).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="contact-title">Hubungi Saya</h2>
+            <div class="contact-container" data-aos="zoom-in">
+                <p data-i18n="contact-msg" style="margin-bottom: 3rem; font-size: 1.2rem; color: var(--secondary-color);">Siap untuk mendiskusikan proyek digital besar Anda berikutnya? Mari terhubung!</p>
+                
+                <div class="contact-detailed-grid">
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+62 812-3456-7890</p>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-sm">Chat Now</a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>firli@spacecoder.com</p>
+                        <a href="mailto:firli@spacecoder.com" class="btn btn-sm">Send Email</a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Firli Fullstack</p>
+                        <a href="https://linkedin.com/in/username" target="_blank" class="btn btn-sm">Connect</a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3 data-i18n="contact-addr-h3">Alamat</h3>
+                        <p data-i18n="contact-addr-p">Jl. Antariksa No. 29, Jakarta</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-sm">View Maps</a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>firli-coder</p>
+                        <a href="https://github.com/username" target="_blank" class="btn btn-sm">Follow</a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fab fa-discord"></i>
+                        <h3>Discord</h3>
+                        <p>Firli#1234</p>
+                        <a href="https://discord.com" target="_blank" class="btn btn-sm">Join Server</a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fab fa-twitter"></i>
+                        <h3>Twitter / X</h3>
+                        <p>@firli_dev</p>
+                        <a href="https://twitter.com/username" target="_blank" class="btn btn-sm">Follow</a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="800">
+                        <i class="fab fa-telegram"></i>
+                        <h3>Telegram</h3>
+                        <p>@firli_dev</p>
+                        <a href="https://t.me/username" target="_blank" class="btn btn-sm">Message</a>
+                    </div>
+                </div>
+
+                <p data-i18n="footer-rights" style="margin-top: 4rem; color: var(--text-gray); font-size: 0.9rem;">© 2026 SpaceCoder Portfolio. Hak cipta dilindungi.</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Modal -->
+        <div id="portfolioModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalBody">
+                    <!-- Content will be injected by JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
